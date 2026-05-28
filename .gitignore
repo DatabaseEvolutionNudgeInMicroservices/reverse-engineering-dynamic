@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+
+# Temp folder
+TEMP
+
+# Dependency directories
+node_modules/
+.npm
+
+# IDE directory
+.idea
+.vscode
+
+# Outputs
+output
+
+# Tests
+coverage
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -1,0 +1,39 @@
+# -- Stages --
+
+stages:
+  - build
+  - test
+
+# -- Variables --
+
+variables:
+  GIT_DEPTH: 1 # Sets git shallow clone to 1 commit.
+
+# -- Jobs --
+
+# Application building
+
+building:
+  stage: build
+  only:
+    - master # Restricts the building to the master branch.
+    - develop # Restricts the building to the develop branch.
+  script:
+    - echo "--Building--"
+
+    # npm
+
+    - npm install # Installs the dependencies.
+
+# Unit testing
+
+unit-testing:
+  stage: test
+  only:
+    - master # Restricts the unit testing to the master branch.
+    - develop # Restricts the unit testing to the develop branch.
+  variables:
+    GIT_STRATEGY: none # Skips the 'git fetch'.
+  script:
+    - echo "--Unit testing--"
+    - npm run test_unit # Starts the unit testing.

@@ -1,0 +1,25 @@
+{
+  "name": "denim-reverse-engineering-dynamic",
+  "version": "1.0.0",
+  "description": "This application enables to dynamically reverse-engineer a microservices architecture from a data perspective.",
+  "scripts": {
+    "mapping": "node index.js",
+    "test_unit": "jest --testRegex=^/test/unit/(.*)\\.test\\.js$ --coverage --forceExit --runInBand",
+    "test_integration": "jest --testRegex=^/test/integration/(.*)\\.test\\.js$"
+  },
+  "author": "Maxime DE RYCKE",
+  "contributors": [
+    "Maxime ANDRÉ"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "fast-safe-stringify": "^2.1.1",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "prettier": "3.7.4",
+    "supertest": "^6.3.3"
+  }
+}
